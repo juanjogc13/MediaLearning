@@ -1,5 +1,6 @@
 package com.example.medialearning
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -19,15 +20,6 @@ fun NavGraph(navController: NavHostController) {
 
 @Composable
 fun VideoScreen() {
-    TODO("Not yet implemented")
+    Text("Pantalla de vídeo (en construcción)")
 }
 
-@Composable
-fun AudioScreen() {
-    TODO("Not yet implemented")
-}
-
-@Composable
-fun HomeScreen(x0: NavHostController) {
-    TODO("Not yet implemented")
-}
