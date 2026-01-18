@@ -13,7 +13,7 @@ fun NavGraph(navController: NavHostController) {
         startDestination = "home"
     ) {
         composable("home") { HomeScreen(navController) }
-        composable("audio") { AudioScreen() }
+        composable("audio") { AudioScreen(navController) }
         composable("video") { VideoScreen() }
     }
 }
