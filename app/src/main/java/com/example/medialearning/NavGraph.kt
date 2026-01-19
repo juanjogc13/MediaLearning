@@ -1,6 +1,5 @@
 package com.example.medialearning
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -14,12 +13,11 @@ fun NavGraph(navController: NavHostController) {
     ) {
         composable("home") { HomeScreen(navController) }
         composable("audio") { AudioScreen(navController) }
-        composable("video") { VideoScreen() }
+        composable("video") { VideoScreen(navController) }
+
+        composable("video_player/{url}") { backStackEntry ->
+            val url = backStackEntry.arguments?.getString("url") ?: ""
+            VideoPlayerScreen(videoUrl = url)
+        }
     }
 }
-
-@Composable
-fun VideoScreen() {
-    Text("Pantalla de vídeo (en construcción)")
-}
-
